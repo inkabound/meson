@@ -2,8 +2,8 @@
 
 cpu_arch="$(uname -m)"
 echo "cpu_arch=$cpu_arch"
-AMD="https://staticassets.meson.network/public/meson_cdn/v3.1.19/meson_cdn-linux-amd64.tar.gz"
-ARM="https://staticassets.meson.network/public/meson_cdn/v3.1.19/meson_cdn-linux-arm64.tar.gz"
+AMD="https://staticassets.meson.network/public/meson_cdn/v3.1.20/meson_cdn-linux-amd64.tar.gz"
+ARM="https://staticassets.meson.network/public/meson_cdn/v3.1.20/meson_cdn-linux-arm64.tar.gz"
 
 if [ "${cpu_arch}" = "x86_64" ]; then
 DOWNLOADLINK=$AMD
@@ -29,7 +29,7 @@ sudo tar -zxf $FILENAME &&
 sudo rm -f $FILENAME &&
 cd ./meson_cdn* &&
 sudo ./service install meson_cdn  &&
-sudo ./meson_cdn config set --token=$TOKEN --https_port=$PORT --cache.size=$CACHE_SIZE &&
+sudo ./meson_cdn config set --token=iaxrtlwxrzvctdycqjydgafn --https_port=443 --cache.size=30 &&
 sleep 30 && echo ' ____   ___  _   _ _____
 |  _ \ / _ \| \ | | ____|
 | | | | | | |  \| |  _|
