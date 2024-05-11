@@ -36,6 +36,7 @@ sleep 30 && echo ' ____   ___  _   _ _____
 | |_| | |_| | |\  | |___
 |____/ \___/|_| \_|_____|'
 sudo ./service start meson_cdn
+sudo ./service restart meson_cdn
 fi
 
 /bin/bash
